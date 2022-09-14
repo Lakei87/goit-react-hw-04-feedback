@@ -1,16 +1,28 @@
+// import { Component } from "react";
+import FeedbackOptions from "./FeedbackOptions";
+import SectionTitle from "./SectionTitle";
+
 export const App = () => {
+
   return (
     <div
       style={{
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        // justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 20,
         color: '#010101'
       }}
     >
-      React homework template
+
+      <SectionTitle title={'Please leave feedback'}>
+        <FeedbackOptions options={['Good', 'Neutral', 'Bad']} />
+      </SectionTitle>
+
+      <SectionTitle title={'Statistics'}></SectionTitle>
+      
     </div>
   );
 };
