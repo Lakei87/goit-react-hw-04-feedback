@@ -1,5 +1,5 @@
-const SectionTitle = ({title, children}) => {
-    return <div>
+const SectionTitle = ({title, className, children}) => {
+    return <div className={className}>
         <h2 className="title">{title}</h2>
         {children}
     </div>
