@@ -8,7 +8,7 @@ class App extends Component {
     Good: 0,
     Neutral: 0,
     Bad: 0,
-  }
+  };
 
   onLeaveFeedback = e => {
     const { textContent: btnName } = e.target;
@@ -16,7 +16,7 @@ class App extends Component {
     this.setState(prevState => ({
       [btnName]: prevState[btnName] + 1,
     }))
-  }
+  };
 
   countTotalFeedback = () => {
     const stateValuesArr = Object.values(this.state);
@@ -24,13 +24,13 @@ class App extends Component {
     return stateValuesArr.reduce((total, value) => {
       return total += value
     })
-  }
+  };
 
   countPositivePercentage = () => {
     const numPositiveFeedback = this.state.Good;
 
     return Math.round(((numPositiveFeedback * 100) / this.countTotalFeedback()));
-  }
+  };
 
   render() {
     const { Good, Neutral, Bad } = this.state;
@@ -41,14 +41,13 @@ class App extends Component {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          // alignItems: 'center',
           marginRight: 'auto',
           marginLeft: 'auto',
           width: '500px',
+          minHeight: '300px',
           fontSize: 20,
           color: '#010101',
-          backgroundColor: "#bada55",
-          
+          // backgroundColor: "#bada55",
         }}
       >
   
@@ -69,7 +68,7 @@ class App extends Component {
         
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
