@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-const Statistics = ({
+export default function Statistics ({
     good,
     neutral,
     bad,
     total,
     positivePercentage
-}) => {
+}) {
     return (
         <ul>
             <li>Good: {good}</li>
@@ -25,5 +25,3 @@ Statistics.propTypes = {
     total: PropTypes.number.isRequired,
     positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;
